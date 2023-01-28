@@ -1,0 +1,77 @@
+body{
+    margin: 0 7rem 3rem ;
+}
+
+@media (max-width: 1000px)
+{
+    body{
+        margin:0 1rem 1rem;
+        align-content:  center;
+    }
+    
+}
+
+
+
+header{
+    margin-top: .5rem;
+}
+
+
+.nav_header_png{
+    width: 12rem;;
+    margin-top: 1rem;
+}
+
+.main-cont{
+    margin: 3rem 0 0;
+}
+
+
+.s_cont{
+    margin-top: 2rem;
+}
+
+
+input, label{
+    display: block;
+}
+
+input{
+    width: 83%;
+    margin-bottom:10px;
+}
+
+.cCode{
+    width: 83%;
+}
+
+.instt{
+    height: 10%;
+}
+
+#addd2, #addd3{
+    display: inline;
+    
+}
+
+#addd2{
+    width: 10px;
+    margin-right: 10px;
+}
+
+#addd3{
+    width: 45%;
+    margin-left: 40px;
+}
+
+.btn1{
+    background-color: rgba(236, 188, 30, 0.849);
+    border-color:rgba(237, 201, 82, 0.849) ;
+    
+}
+
+.btn1:hover{
+    background-color: rgba(252, 196, 11, 0.849) ;
+    border-color:rgba(237, 201, 82, 0.849) ;
+}
