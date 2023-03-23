@@ -1,0 +1,1 @@
+https://services.odata.org/V2/Northwind/Northwind.svc/Customers?$top=2&$select=CustomerID,CompanyName,Country&$filter=Country eq 'Germany'
