@@ -1,31 +1,8 @@
-1. Post to Create Northwind Products using HTTP adapter
-2. Post to Create Northwind Products and Supplier using OData adapter
+1. CPI call to Calculator web service(return result)
+2. SOAPUI --soap--> CPI --soap--> Calculator WS
 
-<?xml version="1.0" encoding="UTF-8"?>
-<Products>
-    <Product>
-        <ID>222</ID>
-        <Name>Laptop</Name>
-        <Description>X Laptop</Description>
-        <ReleaseDate>2020-05-08T00:00:00</ReleaseDate>
-        <Rating>1</Rating>
-        <Price>3050</Price>
-    </Product>
-</Products>
+calculator1:
+https://calculator-webservice.mybluemix.net/calculator?wsdl (Not able to import in Message Mapping)
 
-<?xml version="1.0" encoding="UTF-8"?>
-<Suppliers>
-	<Supplier>
-		<ID>5555</ID>
-		<Name>HHH Supplier</Name>
-		<Concurrency>2</Concurrency>
-        <Address>
-			<Street>Long Street</Street>
-			<City>ZZZ</City>
-			<State>BB</State>
-			<ZipCode>12345</ZipCode>
-			<Country>DE</Country>
-		</Address>
-	</Supplier>
-</Suppliers>
-
+calculator2 (used in example):
+http://www.dneonline.com/calculator.asmx?WSDL (Able to import in Message Mapping)
