@@ -1,8 +1,34 @@
-1. CPI call to Calculator web service(return result)
-2. SOAPUI --soap--> CPI --soap--> Calculator WS
+Convert JSON to XML with namespace prefix
 
-calculator1:
-https://calculator-webservice.mybluemix.net/calculator?wsdl (Not able to import in Message Mapping)
+xmlns:ns0=http://cpi.sap.com/demo;xmlns:ns1=http://sap.com/xi/XI/SplitAndMerge
 
-calculator2 (used in example):
-http://www.dneonline.com/calculator.asmx?WSDL (Able to import in Message Mapping)
+Source payload:
+{
+    "row": [
+        {
+            "CustomerID": "ALFKI",
+            "CompanyName": "Alfreds Futterkiste",
+            "Country": "Germany"
+        },
+        {
+            "CustomerID": "BLAUS",
+            "CompanyName": "Blauer See Delikatessen",
+            "Country": "Germany"
+        }
+    ]
+}
+
+Target payload:
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:MT_Customer xmlns:ns0="http://cpi.sap.com/demo">
+    <row>
+        <CustomerID>ALFKI</CustomerID>
+        <CompanyName>Alfreds Futterkiste</CompanyName>
+        <Country>Germany</Country>
+    </row>
+    <row>
+        <CustomerID>BLAUS</CustomerID>
+        <CompanyName>Blauer See Delikatessen</CompanyName>
+        <Country>Germany</Country>
+    </row>
+</ns0:MT_Customer>
