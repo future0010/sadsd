@@ -1,34 +1,36 @@
-Convert JSON to XML with namespace prefix
-
-xmlns:ns0=http://cpi.sap.com/demo;xmlns:ns1=http://sap.com/xi/XI/SplitAndMerge
+Convert XML to JSON
 
 Source payload:
-{
-    "row": [
-        {
-            "CustomerID": "ALFKI",
-            "CompanyName": "Alfreds Futterkiste",
-            "Country": "Germany"
-        },
-        {
-            "CustomerID": "BLAUS",
-            "CompanyName": "Blauer See Delikatessen",
-            "Country": "Germany"
-        }
-    ]
-}
-
-Target payload:
 <?xml version='1.0' encoding='UTF-8'?>
 <ns0:MT_Customer xmlns:ns0="http://cpi.sap.com/demo">
     <row>
         <CustomerID>ALFKI</CustomerID>
         <CompanyName>Alfreds Futterkiste</CompanyName>
         <Country>Germany</Country>
+		<Count>123</Count>
     </row>
     <row>
         <CustomerID>BLAUS</CustomerID>
         <CompanyName>Blauer See Delikatessen</CompanyName>
         <Country>Germany</Country>
+		<Count>888</Count>
     </row>
 </ns0:MT_Customer>
+
+Target payload:
+{
+    "row": [
+        {
+            "CustomerID": "ALFKI",
+            "CompanyName": "Alfreds Futterkiste",
+            "Country": "Germany",
+            "Count": "123"
+        },
+        {
+            "CustomerID": "BLAUS",
+            "CompanyName": "Blauer See Delikatessen",
+            "Country": "Germany",
+            "Count": "888"
+        }
+    ]
+}
