@@ -6,14 +6,14 @@ Sub GetEmployeeDetails()
     Dim employeeIDs As String
     Dim place As String
     Dim Name As String
-
+ 
     ' Get the employee ID from the second sheet
     empID = InputBox("Enter employee ID:")
-
+ 
     ' Initialize the employeeIDs variable
     employeeIDs = ""
     Name = ""
-
+ 
     ' Reset the color of all reportees to "no fill"
     With ThisWorkbook.Worksheets("Sheet1")
         For rowNum = 2 To .Range("A" & .Rows.Count).End(xlUp).Row
@@ -23,7 +23,7 @@ Sub GetEmployeeDetails()
             .Cells(rowNum, 4).Interior.Color = xlNone
         Next rowNum
     End With
-
+ 
     ' Find the employee ID in the first sheet and get the corresponding name, manager ID, and place
     With ThisWorkbook.Worksheets("Sheet1")
         For rowNum = 2 To .Range("A" & .Rows.Count).End(xlUp).Row
@@ -37,13 +37,13 @@ Sub GetEmployeeDetails()
             End If
         Next rowNum
     End With
-
+ 
     ' Write the employee name, manager ID, employee IDs, and place to the second sheet
     ActiveSheet.Cells(ActiveCell.Row, 1).Value = empID
     ActiveSheet.Cells(ActiveCell.Row, 2).Value = empName
     ActiveSheet.Cells(ActiveCell.Row, 3).Value = managerID
     ActiveSheet.Cells(ActiveCell.Row, 4).Value = place
-
+ 
     With ThisWorkbook.Worksheets("Sheet1")
         For rowNum = 2 To .Range("C" & .Rows.Count).End(xlUp).Row
             If .Cells(rowNum, 3).Value = empID Then
@@ -63,7 +63,7 @@ Sub GetEmployeeDetails()
             End If
         Next rowNum
     End With
-
+ 
     ' Write the reportees ID and name
     ActiveSheet.Cells(ActiveCell.Row, 5).Value = employeeIDs
     ActiveSheet.Cells(ActiveCell.Row, 6).Value = Name
